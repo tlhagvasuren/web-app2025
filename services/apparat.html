@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шүдний аппарат, гажиг заслын эмчилгээ</title>
+    <link rel="stylesheet" href="css/delgerengui-d.css">
+</head>
+<body>
+    <!-- header section start -->
+    <header>
+        <a class="logo"><img src="../images/logo.png" alt="logo" /></a>
+
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="../home/home.html">Нүүр хуудас</a></li>
+                <li><a href="../services/services.html">Үйлчилгээ</a></li>
+                <li><a href="../doctors/doctors.html">Эмч нар</a></li>
+                <li><a href="../news/news.html">Мэдээ мэдээлэл</a></li>
+                <li><a href="../bookOnline/book.html">Цаг захиалах</a></li>
+                <li><a href="../sign/sign.html"><button  class="button" >Нэвтрэх</button></a></li>
+
+
+            </ul>
+        
+        </nav>
+     
+        <div class="fa-solid fa-bars "> </div>
+
+
+
+
+
+
+    </header>
+    <!-- header section end -->
+
+    <aside>
+        <h2>Санал болгох эмчилгээ, үйлчилгээ</h2>
+        <ul>
+            <a href="uzleg.html"><li>Шүдний ерөнхий үзлэг, зөвлөгөө</li></a>
+            <a href="tsoorolt.html"><li>Шүд цооролт, ломбо</li></a>
+            <a href="apparat.html"><li>Шүдний аппарат, гажиг заслын эмчилгээ</li></a>
+            <a href="implant.html"><li>Имплант, хиймэл шүд</li></a>
+            <a href="goo-shn.html"><li>Шүдний гоо сайхны эмчилгээ</li></a>
+            <a href="emergency.html"><li>Яаралтай тусламж</li></a>
+        </ul>
+    </aside>
+
+    <main>
+        <img src="https://cuticul.mn/wp-content/uploads/2024/10/%D1%88%D2%AF%D0%B4%D0%BD%D0%B8%D0%B9-%D1%8D%D0%BC%D1%87%D0%B8%D0%BB%D0%B3%D1%8D%D1%8D-1.png" alt="bagaj">
+        <h1>Шүдний аппарат, гажиг заслын эмчилгээ</h1>
+        <ul>
+            <li onclick="openModal('Шүд нь үе шаттай засагддаг', '1.Alignment: Шүдний байрлал тэгширч, харагдах байдлын хувьд тэгширч ирнэ. Энэ үед боллоо гэж бодон яаран авахуулж болохгүй. 2.Leveling: Шүдний байрлал засагдсаны дараа хөндлөн чиглэлд хоршилт болон зуулт засагдаж эхэлнэ. 3.Space closure: Шүдний эгнээнээс гадна байсан шүд болон хоршдоггүй байсан шүд тэгширч нэг эгнээнд орж ирэхэд шүд хооронд болон хоршилт завсар жижиг зайнууд гарсан байдаг. Эдгээр зайг энэ үед хаах бөгөөд олон төрлийн амьтны зурагтай татлагын резинийг ашиглана. 4.Finishing: Бүх шүд зөв байрлалаа олон хорших ёстой цэг болон төвгөр, ховилоор хоршиж, зуулт IDEAL түвшинд ирэх үе юм.')">Шүд нь үе шаттай засагддаг</li>
+            <li onclick="openModal('Шүдний гажиг заслын авагддаггүй аппарат зүүх хугацаа','Шүдний гажиг заслын авагддаггүй аппарат эмчилгээ нь тухайн хүний гажгаас хамаараад 1,5-3 жил үргэлжилдэг. Урт хугацаанд хийгдэх эмчилгээ тул та байнга амьдрах газраа аппарат зүүх нь зөв бөгөөд гадагшаа сурах болон амьдрахаар явахаар төлөвлөж буй тохиолдолд оношилгоо хийлгэхдээ гажиг заслын эмчтэйгээ хугацааны хувьд боломжтой эсэхийг лавлаарай. Өөр улсад очин эмчилгээг үргэлжлүүлэхэд маш хэцүү байдаг бөгөөд эмчилгээний төлөвлөгөө болон таныг аппарат зүүхээс өмнө нь ямар байсныг эмч мэдэхгүй тул хүндрэлтэй байдаг.')">Шүдний гажиг заслын авагддаггүй аппарат зүүх хугацаа</li>
+            <li onclick="openModal('Шүдний аппаратны төрөл',' Шүдний гажиг заслын авагддаггүй аппарат нь метал, шаазан, synergy гэсэн төрлүүд байдаг.')">Шүдний аппаратны төрөл</li>
+        </ul>
+
+        <div class="modal-davharga" id="modalDavharga">
+            <div class="modal">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h3 id="garchig">Гарчиг</h3>
+                <p id="medeelel">Дэлгэрэнгүй мэдээлэл</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/index.js"></script>
+
+    <!-- footer section start  -->
+
+    <section class="footer">
+        <div class="box-container">
+
+        <div class="box">
+            <h2 class="logo"><span>Den</span>tal Care</h2>
+            <p>Олон жилийн туршлагатай манай хамт олон
+танд туслахад ямагт бэлэн.</p>
+
+        </div>
+
+        <div class="box">
+            <h2 class="logo"><span>Тус</span>ламж</h2>
+
+            <a href="#">Түгээмэл асуулт</a>
+            <a href="#">Санал хүсэлт</a>
+         
+        </div>
+
+        <div class="box">
+            <h2 class="logo"><span>Холбоо</span>барих</h2>
+
+            <a href="#">
+                Даваа - Баасан 09:00 - 20:00 цаг</a>
+   
+            <a href="#">
+                +976 - 77007700</a>
+            <a href="#">info@cuticul.mn</a>
+         
+        </div>
+    </div>
+
+
+        <h1 class="credit">created by <span> Зургаадугаар баг </span>ICSI301</h1>
+    </section>
+
+    <!-- footer section end  -->
+</body>
+</html>
