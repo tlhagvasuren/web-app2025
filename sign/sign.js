@@ -34,3 +34,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+
+
+const containar=document.querySelector('.container');
+const registerBtn=document.querySelector('.register-btn');
+const loginBtn=document.querySelector('.login-btn');
+registerBtn.addEventListener('click' , () =>{
+    containar.classList.add('active');
+
+})
+loginBtn.addEventListener('click' , () =>{
+    containar.classList.remove('active');
+
+})
+
+
+

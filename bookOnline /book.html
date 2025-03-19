@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шүдний эмнэлэг - Цаг захиалах</title>
+
+    <!-- Гадаад CSS -->
+    <link rel="stylesheet" href="book.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Гадаад JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+
+    <!-- Header хэсэг -->
+    <header>
+        <a class="logo"><img src="../images/logo.png" alt="logo" /></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../home/home.html">Нүүр хуудас</a></li>
+                <li><a href="#">Үйлчилгээ</a></li>
+                <li><a href="#">Эмч нар</a></li>
+                <li><a href="#">Мэдээ мэдээлэл</a></li>
+                <li><a href="#">Цаг захиалах</a></li>
+            </ul>
+        </nav>
+        <div class="fa-solid fa-bars"></div>
+        <a href="../sign/sign.html"><button class="button">Нэвтрэх</button></a>
+    </header>
+
+    <!-- Цаг захиалах хэсэг -->
+    <section class="bookOnline">
+            <div class="appointment-box">
+                <h1>Онлайн цаг захиалга</h1>
+                <p>Хүсвэл манай 77007700 утасруу залган цаг захиалах боломжтой .
+                    Онлайн цаг захиалга тул таны утасруу холбогдон цагийг баталгаажуулснаар тухайн цаг тань дээр тавигдах болно.
+                    </p>
+
+                <!-- Нэр оруулах -->
+        
+                <div class="input-box">
+                    <label for="input-box">Таны нэр:</label>
+                
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Таны нэр" required>
+                    
+                </div>
+
+                <!-- utas  oruulah -->
+            
+                <div class="input-box">
+                    <label for="input-box">Таны утас :</label>
+                    <input type="tel" placeholder="Таны утас" required>
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <!-- Салбар сонгох -->
+                 <div class="input-box">
+                <label for="industry">Салбар:</label>
+                <select id="industry" name="industry">
+                    <option value="it">Сүхбаатар дүүрэг</option>
+                    <option value="finance">Баянзүрх дүүрэг</option>
+                    <option value="health">Хан-Уул дүүрэг</option>
+                    <option value="education">Сонгинохайрхан дүүрэг</option>
+                </select>
+            </div>
+
+                <!-- Өдөр сонгох -->
+                 <div class="input-box">
+                <label for="calendar">Өдрөө сонгоно уу:</label>
+                <input type="text" id="calendar">
+                 </div>
+
+                <!-- Цаг сонгох -->
+                <div class="input-box">
+                <label for="time">Цагаа сонгоно уу:</label>
+                <select id="industry">
+                    <option>Эхлээд өдөр сонгоно уу</option>
+                </select>
+            </div>
+                <div class="input-box">
+                    <label for="text-issues">Таньд ямар зовиур байна ?</label>
+                    <input type="text-issues" placeholder="Мэдээлээ бичнэ үү?" required>
+          
+                <button type="submit"class="btn">Цаг захиалах</button>
+            </div>
+        </section>
+            
+      
+            <section class="gazriin_zurag">
+                <h3 class="heading"> Салбарын хаяг байршилууд</h3>
+                <div class="locations">
+        
+                    <div class="locationPhotos">
+                        <div class="lo1">
+                            <h3> Сүхбаатар дүүрэг </h3>
+                            <p>СБД, 1-р хороо, Чингисийн өргөн чөлөө, Төв шуудангийн зүүн талд.</p>
+                            <a href="#"><img src="logo.png" alt="Logo"></a>
+                        </div>
+                        <div class="lo1">
+                            <h3> Баянзүрх дүүрэг</h3>
+                            <p> БЗД, 13-р хороолол, Кино үйлдвэрийн автобусны буудлын урд.</p>
+                            <a href="#"><img src="../images/blog 1.png" alt="Logo"></a>
+                        </div>
+                        <div class="lo1">
+                            <h3>Хан-Уул дүүрэг</h3>
+                            <p>ХУД, 19-р хороолол, Зайсангийн зам дагуу, Зайсан Хилл цогцолборын ар талд.</p>
+                            <a href="#"><img src="logo.png" alt="Logo"></a>
+                        </div>
+                        <div class="lo1">
+                            <h3>Сонгинохайрхан дүүрэг</h3>
+                            <p>СХД, 5 шар, Баруун салаа зам дагуу, Хархорин захын ар талд
+                                .</p>
+                            <a href="#"><img src="logo.png" alt="Logo"></a>
+                        </div>
+                    </div>
+        
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.179689993619!2d106.88904917625906!3d47.91231917107295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aa1b4b28d0c2e1%3A0x2b7ad7bd2439a4f5!2zMTAtcnJlbiBjaG9yb29sb2wsIPCfjeCfk-CfjOCfl-CfjeCfmCDQkdC10LvRgtGA0LDQuw!5e0!3m2!1sen!2smn!4v1710224345667!5m2!1sen!2smn"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+   
+
+
+
+     <!-- footer section start  -->
+
+     <section class="footer">
+        <div class="box-container">
+
+        <div class="box">
+            <h2 class="logo"><span>Den</span>tal Care</h2>
+            <p>Олон жилийн туршлагатай манай хамт олон
+танд туслахад ямагт бэлэн.</p>
+
+        </div>
+
+        <div class="box">
+            <h2 class="logo"><span>Тус</span>ламж</h2>
+
+            <a href="#">Түгээмэл асуулт</a>
+            <a href="#">Санал хүсэлт</a>
+         
+        </div>
+
+        <div class="box">
+            <h2 class="logo"><span>Холбоо</span>барих</h2>
+
+            <a href="#">
+                Даваа - Баасан 09:00 - 20:00 цаг</a>
+   
+            <a href="#">
+                +976 - 77007700</a>
+            <a href="#">info@cuticul.mn</a>
+         
+        </div>
+    </div>
+
+
+        <h1 class="credit">created by <span> Зургаадугаар баг </span>ICSI301</h1>
+    </section>
+
+    <!-- footer section end  -->
+
+
+    <!-- Custom JS -->
+    <script src="book.js"></script>
+
+</body>
+</html>
