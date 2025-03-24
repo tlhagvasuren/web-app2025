@@ -134,7 +134,7 @@ header .active{
 
 /* home section start */
 .home{
-    min-height:100vh ;
+    height:100vh ;
     padding-top: 8rem;
 
 }
@@ -151,7 +151,6 @@ header .active{
 .home .row .images{
     width: 100%;
     height: 95vh;
-    overflow: hidden;
     position: relative;
     opacity:90%;
     
@@ -161,6 +160,7 @@ header .active{
 .home .row .images img{
     width: 100%;
     margin-top: 5rem;
+    height: 90%;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -176,13 +176,13 @@ header .active{
 
 .home .content h1 {
     font-size: 5.5rem;
-    color: var(--white);
+    color: var(--background-color);
    
 }
 
 .home .content p{
-    font-size: 1.8rem;
-    color: var(--white);
+    font-size: 1.9rem;
+    color: var(--background-color);
     margin-bottom: 2rem;
 }
 
@@ -212,10 +212,10 @@ header .active{
 .about .box-container{
     padding: 1rem 0;
     display: flex;
+    flex-wrap: wrap;
 justify-content: space-between;  
 width: 80%;
 margin-left: 10%;
-height: 70rem;
 ;
 
 
@@ -227,21 +227,22 @@ margin-top: 5rem;
     box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
     display: flex;
     flex-direction: column;
-  
     overflow: hidden;
     align-items: center;
-    height: 60rem;
+    height: 40rem;
     width: 30%;
-    cursor: pointer;
 
 }
-.about .box-container .box :hover{
+.about .box-container .box:hover{
     background-color: white;
 }
 .images img{
-    width: 100%;
+width: 30rem;
+height: 20rem;
     align-items: center;
-    height: 90%;
+    object-fit: fill;
+    margin-top: 2rem;
+ 
 
 }
 
@@ -256,23 +257,64 @@ margin-top: 5rem;
 .about .box-container .box .content h3{
     font-size: 2rem;
     color: var(--blue);
-    text-align: start;
+    text-align: center;
+    padding: .8rem 0;
  
 }
 .about .box-container .box .content p{
     font-size: 1.5rem;
     color: var(--gray);
-    margin: 1rem;
+    width: 30rem;
+    height: 5rem;
+
 
 }
 
 /* about section end */
+/* emnelegiin unelgee start */
+.rating{
+    width: 100%;
+    height:20rem;
+}
+.rating .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: 0 4rem;
+    flex-wrap: nowrap;
+    
+
+
+}
+.rating .container .box{
+    width: 100%;
+    height: 100%;
+    margin : 0 10rem;
+    font-size: 3.2rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.rating .container .box i{
+    font-size:4rem;
+    color:rgb(162, 162, 162);
+    
+   
+}
+.rating .container .box p{
+    font-size: 2rem;
+}
+
 /* emnelegiin taniltsuulga start */
 .intro {
     display: flex;
     align-items: center;
      width: 80%;
      margin: 8rem 10%;
+     flex-wrap: nowrap;
     
    height: 85vh;
    border:  1px solid var(--blue);
@@ -336,7 +378,6 @@ margin-top: 5rem;
     overflow: hidden;
     width: 100%;
     max-width: 1000px;
-    position: relative;
     display: flex;
 
   }
@@ -526,6 +567,9 @@ padding: 10rem 10%;
     font-size: 1.5rem;
     padding-top: 2rem;
   }
+  .intro-clinic .button{
+    margin-top:5rem;
+  }
 
 
 
@@ -554,7 +598,7 @@ padding: 10rem 10%;
 .card .box-container .box img{
     width:100%;
     height: 30rem;
-    object-fit: cover;
+    object-fit:contain;
 
 
 }
@@ -690,7 +734,9 @@ height: 3rem;
 
 /* gazriin zurag start  */
 .gazriin_zurag{
-    background-color: var(--main-color1);
+    width: 100%;
+    padding : 10rem 5%;
+
 }
 .locations {
     display: grid;
@@ -707,7 +753,7 @@ height: 3rem;
   }
   
   .lo1 {
-    background-color: #f9f9f9;
+    background-color:rgb(255, 245, 232);
     padding:3rem;
     border-radius: 2rem;
     box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
@@ -762,7 +808,12 @@ height: 3rem;
 
  /* footer section start  */
  .footer{
-    background:var(--blue);
+    background:var(--background-color);
+    color: var(--main-color1);
+  width: 100%;
+  border-top: 1px solid gray ;
+
+
 
  }
  .footer .box-container{
@@ -780,36 +831,42 @@ height: 3rem;
     margin: 2rem;
     text-align: start;
    }
-  
-   .footer .box:nth-child(1){
-    text-align: left;
+   .footer .box img{
+    height: 20rem;
+
    }
+   .footer .icons{
+    display: flex;
+font-size: 3rem;  
+justify-content: center;
+align-items: center;
+cursor: pointer;
+ }
+ .footer .icons i:hover{
+    color: var(--beige);
+ }
+ .footer .icons i{
+    color: var(--main-color1);
+    margin: .8rem;
+ }
   
   /* logo  */
   
   .footer .box .logo{
     padding: 2rem 0;
-    font-size: 3rem;
-    color: var(--wight);
+    font-size: 2.5rem;
   }
   
-  .footer .box .logo:hover{
-    color: var(--white);
-  }
-  
-  .footer .box .logo span{
-    color: var(--main-color1);
-    
-  }
-  
+
+
   .footer .box p{
-    font-size: 2rem;
-    color: var(--white);
+    font-size: 1.7rem;
+    color: var(--main-color1);
   }
   
   .footer .box a{
-    color: var(--wight);
-    font-size: 2rem;
+    color: var(--main-color1);
+    font-size: 1.7rem;
     display: block;
     padding: .2rem 0;
   }
@@ -820,19 +877,13 @@ height: 3rem;
   
   
   .footer .credit{
-    width: 90%;
- 
+    width: 100%;
     font-size: 2rem;
-    color: var(--wight);
     text-align: center;
-    border-top: .2rem solid var(--wight);
+    background-color: var(--main-color1);
+    color: white;
   }
-  
-  .footer .credit span{
-    color: var(--main-color1);
-    text-decoration: underline;
-    letter-spacing: .5rem;
-  }
+
   
   
   
