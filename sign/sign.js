@@ -1,16 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const loginButton = document.querySelector("header .button");
 
-    if (localStorage.getItem("loggedIn") === "true") {
-        loginButton.textContent = "Миний түүхүүд";
-        loginButton.href = "../history/history.html"; 
-    }
-});
+
 document.addEventListener("DOMContentLoaded", function () {
-    const loginForm = document.querySelector(".form-right form");
+    const loginForm = document.querySelector(".form-box.login form");
     const errorMessage = document.getElementById("errorMessage");
 
-    // Хуурамч хэрэглэгчдийн жагсаалт
     const fakeUsers = [
         { username: "admin", password: "1234" },
         { username: "testuser", password: "password123" },
@@ -18,19 +11,24 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     loginForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Хуудсыг дахин ачаалхаас сэргийлэх
+        event.preventDefault();
 
         const username = loginForm.querySelector("input[type='text']").value;
         const password = loginForm.querySelector("input[type='password']").value;
 
-        // Хэрэглэгчийн мэдээллийг шалгах
         const userFound = fakeUsers.some(user => user.username === username && user.password === password);
 
         if (userFound) { 
             localStorage.setItem("loggedIn", "true");
-            window.location.href = "../home/home.html"; // Нэвтэрсний дараа шилжих хуудас
+
+            console.log("Login successful. Redirecting...");
+            window.location.href = "../home/home1.html"; // Home page руу чиглүүлнэ
+
         } else {
-            errorMessage.style.display = "block"; // Алдааны мессежийг харуулах
+            console.log("Login failed. Showing error message.");
+            if (errorMessage) {
+                errorMessage.style.display = "block";
+            }
         }
     });
 });
@@ -49,6 +47,3 @@ loginBtn.addEventListener('click' , () =>{
     containar.classList.remove('active');
 
 })
-
-
-

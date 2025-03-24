@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide Slider</title>
+  <style>
+    :root {
+      --beige: #f4a986;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #fff;
+    }
+
+    .outside {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--beige);
+      margin: 30px 0;
+    }
+
+    .outside i {
+      font-size: 6rem;
+      color: var(--beige);
+    }
+
+    .outside h1 {
+      font-size: 2.5rem;
+      margin: 2rem 0;
+    }
+
+    .slideshow-container {
+      max-width: 90%;
+      overflow: hidden;
+      position: relative;
+      margin: auto;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .mySlide {
+      flex: 0 0 100%;
+      box-sizing: border-box;
+    }
+
+    .mySlide img {
+      width: 100%;
+      height: 65vh;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.3s ease;
+      border-radius: 50%;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 10;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .dot.active {
+      background-color: #717171;
+    }
+  </style>
+</head>
+<body>
+
+<div class="outside">
+  <i class="fa-solid fa-location-dot"></i>
+  <h1>Тав тухтай , тохилог орчин</h1>
+</div>
+
+<div class="slideshow-container">
+  <div class="slider-track" id="sliderTrack">
+    <div class="mySlide"><img src="../images/outside/IMG_5351.JPG" alt=""></div>
+    <div class="mySlide"><img src="../images/outside/IMG_5352.JPG" alt=""></div>
+    <div class="mySlide"><img src="../images/outside/IMG_5353.JPG" alt=""></div>
+    <div class="mySlide"><img src="../images/outside/IMG_5354.JPG" alt=""></div>
+    <div class="mySlide"><img src="../images/outside/IMG_5355.JPG" alt=""></div>
+    <div class="mySlide"><img src="../images/outside/IMG_5356.JPG" alt=""></div>
+    <div class="mySlide"><img src="../images/outside/IMG_5357.JPG" alt=""></div>
+    <div class="mySlide"><img src="../images/outside/IMG_5358.JPG" alt=""></div>
+    <div class="mySlide"><img src="../images/outside/IMG_5359.JPG" alt=""></div>
+  </div>
+
+  <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+  <a class="next" onclick="moveSlide(1)">&#10095;</a>
+</div>
+
+<div class="dots" id="dotContainer"></div>
+
+<script>
+  const sliderTrack = document.getElementById('sliderTrack');
+  const slides = document.querySelectorAll('.mySlide');
+  const dotContainer = document.getElementById('dotContainer');
+  let currentSlide = 0;
+
+  // Create dots
+  slides.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(index));
+    dotContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.dot');
+
+  function updateSlider() {
+    sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentSlide].classList.add('active');
+  }
+
+  function moveSlide(direction) {
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    updateSlider();
+  }
+
+  function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+  }
+
+  // Auto Slide
+  setInterval(() => {
+    moveSlide(1);
+  }, 4000);
+</script>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

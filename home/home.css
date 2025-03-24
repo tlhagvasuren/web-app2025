@@ -2,13 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* root color */
 :root {
-    --blue: #088378 ;
+    --blue: #242640 ;
+    
 
     --black:#141618;
-    --white:#fff;
-    --primary-color: #e3f9f5;
-    --main-color1:#f4f4f4;
-
+    --white:#ffffff;
+    --primary-color: #b3d2d6;
+    --main-color1:#283D48;
+    --background-color:#FDF8EF;
+    --beige:#C8B282;
 
 }
 /* custom css */
@@ -26,7 +28,7 @@
 html{
     font-size:62.5% ;
     overflow-x: hidden;
-    background-color:var(--primary-color);
+    background-color:var(--background-color);
 }
 /* button */
 .button{
@@ -56,7 +58,8 @@ header .button{
 }
 header .button:hover{
 
-color: var(--black);
+color: var(--white);
+background-color: var(--blue);
 
 }
 
@@ -65,8 +68,8 @@ color: var(--black);
 /* header nav section start */
 header {
     width:100% ;
-    height: 10rem;
-    background-color: var(--blue);
+    height: 13rem;
+    background-color: var(--background-color);
     position: fixed;
     top:0rem;
     left:50%;
@@ -76,6 +79,7 @@ header {
     justify-content: space-between;
     
     z-index: 1000;
+    border-top:var(--main-color1) solid 2rem;
   
 }
 /* header nav section end */
@@ -85,6 +89,7 @@ header {
 header .logo img{
     height: 17rem;
     margin-left: 4rem;
+    
    
 }
 
@@ -101,11 +106,11 @@ header .navbar ul li{
     margin: 0 1rem;
 }
 header .navbar ul li a{
-    color:var(--white);
+    color:var(--main-color1);
     font-size: 1.8rem;
 }
 header .navbar ul li a:hover{
-    color:var(--primary-color);
+    color:var(--blue);
 }
 header .fa-bars {
     font-size: 3rem;
@@ -137,25 +142,47 @@ header .active{
     display:flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
 
-}
-.home .row .images img{
-    height: 80vh;
+    
 
 }
+.home .row .images{
+    width: 100%;
+    height: 95vh;
+    overflow: hidden;
+    position: relative;
+    opacity:90%;
+    
+    
+}
+
+.home .row .images img{
+    width: 100%;
+    margin-top: 5rem;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.home .content{
+    position: absolute;
+    left:0;
+    margin-left: 10rem;
+    top: 30%;
+
+}
+
 .home .content h1 {
-    font-size: 4rem;
-    color: var(--black);
-    margin:1rem
+    font-size: 5.5rem;
+    color: var(--white);
+   
 }
-.home .content h1 span{
-    color: var(--blue);
-}
+
 .home .content p{
     font-size: 1.8rem;
-    color: var(--black);
+    color: var(--white);
     margin-bottom: 2rem;
 }
 
@@ -164,9 +191,9 @@ header .active{
     text-align: center;
     font-size: 4rem;
     padding-top: 4rem;
-    color: var(--blue);
+    color: var(--main-color1);
     letter-spacing: .1rem;
-    max-width: 90%;
+    max-width: 100%;
    
 
 }
@@ -181,47 +208,56 @@ header .active{
 
 }
  /* about section start */
- .about{
-    background-color:var(--main-color1);
 
-}
 .about .box-container{
     padding: 1rem 0;
+    display: flex;
+justify-content: space-between;  
+width: 80%;
+margin-left: 10%;
+height: 70rem;
+;
+
 
 
 }
 .about .box-container .box{
-    width:75%;
-    margin: 4rem auto;
+margin-top: 5rem;
     border-radius: .5rem;
     box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
     display: flex;
-    background-color: var(--white);
+    flex-direction: column;
+  
     overflow: hidden;
     align-items: center;
+    height: 60rem;
+    width: 30%;
+    cursor: pointer;
 
 }
-.about .box-container .box .images{
-    height: 40rem;
-    width: 50%; 
+.about .box-container .box :hover{
+    background-color: white;
 }
-
-.about .box-container .box .images img{
-    height: 100%;
+.images img{
     width: 100%;
+    align-items: center;
+    height: 90%;
+
 }
+
 .about .box-container .box .content{
     display: flex;
     flex-direction:column;
     justify-content: center;
     width: 80%;
-    margin: 4rem;
+    margin: 0 1rem;
 }
+
 .about .box-container .box .content h3{
-    font-size: 2.6rem;
+    font-size: 2rem;
     color: var(--blue);
-    text-align: center;
-    margin: 2rem;
+    text-align: start;
+ 
 }
 .about .box-container .box .content p{
     font-size: 1.5rem;
@@ -229,48 +265,241 @@ header .active{
     margin: 1rem;
 
 }
-.about .box-container .box:nth-child(even){
-    flex-flow:row-reverse ;
-}
+
 /* about section end */
 /* emnelegiin taniltsuulga start */
 .intro {
     display: flex;
     align-items: center;
-   width: 80%;
-   margin:10%;
-   box-shadow: 0 .3rem .5rem rgba(30, 35, 136, 0.3);
-   border-radius: 1rem;
-   background-color: var(--main-color1);
+     width: 80%;
+     margin: 8rem 10%;
+    
+   height: 85vh;
+   border:  1px solid var(--blue);
+   padding: 0 8rem;
+   gap:4rem;
 
-   padding: 4rem;
+
 }
 .intro .container{
     width: 100%;
 }
+
 .intro .container .title{
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--blue);
     text-align: center;
+    padding-bottom: 4rem;
+
 }
 .intro .container p{
-    font-size: 1.5rem;
-    color: var(--black);
-    
+    font-size: 1.8rem;
+    color: var(--blue);
+    width: 90%;
+ 
 }
-/* .intro .intro-photo{
-    width: 80rem;
-    height: 100%;
+.intro .images{
+  
+    height: 70vh;
+    width: 70rem;
+   
+
 
 }
-.intro .intro-photo img{
+.intro .images img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 
-} */
+}
 
 
 /* emnelegiin taniltsuulga end */
+
+/* hereglegchiin setgegdelud */
+.pa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    color:var(--beige);
+}
+
+.userComment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .slider-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    display: flex;
+
+  }
+
+  .comment-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+  }
+
+  .comment-slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    padding : 2rem ;
+    align-items: center;
+    border-radius: 20px;
+    border:.1rem solid var(--blue);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  }
+
+  .comment-image img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .user-content {
+    padding: 10px;
+  }
+
+  .user-content p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .user-content .star i {
+    color: var(--blue);
+    font-size: 1rem;
+  }
+
+  .user-content h1 {
+    font-size: 1.5rem;
+    color: var(--blue);
+  }
+
+  .userComment-buttons {
+    margin-top: 20px;
+  }
+
+  .userComment-buttons button {
+    padding: 10px 16px;
+    font-size: 18px;
+    margin: 0 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .userComment-buttons button:hover {
+    background-color: var(--blue);
+    color: white;
+  }
+/* hereglegchdiin setgegdel end   */
+
+/* gadaah zuragnuud start  */
+.outside {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--beige);
+    margin: 30px 0;
+  }
+
+  .outside i {
+    font-size: 8rem;
+    color: var(--beige);
+  }
+
+  .outside h1 {
+    font-size: 4rem;
+    margin: 2rem 0;
+  }
+
+  .slideshow-container {
+width: 90%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+  }
+
+  .slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .mySlide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+  }
+
+  .mySlide img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 10;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .dots {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .dot.active {
+    background-color: #717171;
+  }
+/* gadaah zuragnuud end  */
+
 .contactInfo{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -281,8 +510,9 @@ header .active{
     
   }
   .contact{
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
+padding: 10rem 10%;
+    background-color: rgb(255, 245, 232);
 
   }
   .photo_clinic img {

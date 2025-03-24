@@ -354,6 +354,9 @@ transition-delay: 1.2s;
 .form-box.register .btn{
   margin-top: 1rem;
 }
+/* aldaanii messega */
+#errorMessage{
+color: red; display: none;}
 
 
 /* sign in and sign up end*/
